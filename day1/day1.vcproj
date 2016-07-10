@@ -173,9 +173,21 @@
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\GL.h"
+				>
+			</File>
+			<File
+				RelativePath=".\WinSurface.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\main.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\WinSurface.cpp"
 			>
 		</File>
 	</Files>
