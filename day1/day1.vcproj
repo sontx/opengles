@@ -178,10 +178,22 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Vertex.h"
+				>
+			</File>
+			<File
 				RelativePath=".\WinSurface.h"
 				>
 			</File>
 		</Filter>
+		<File
+			RelativePath=".\Basic.fs"
+			>
+		</File>
+		<File
+			RelativePath=".\Basic.vs"
+			>
+		</File>
 		<File
 			RelativePath=".\main.cpp"
 			>
