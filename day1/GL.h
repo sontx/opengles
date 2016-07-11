@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include <gl2.h>
-#include <windows.h>
+#include <stddef.h>
 #include <egl.h>
 
 #if WIN32

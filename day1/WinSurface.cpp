@@ -2,6 +2,7 @@
 
 #include "WinSurface.h"
 #include "GL.h"
+#include <windows.h>
 
 static EGLDisplay			eglDisplay;
 static EGLConfig			eglConfig;
