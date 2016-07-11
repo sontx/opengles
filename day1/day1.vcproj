@@ -178,7 +178,23 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Matrix.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Shader.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Vector4.h"
 				>
 			</File>
 			<File
@@ -203,7 +219,23 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Matrix.cpp"
+			>
+		</File>
+		<File
 			RelativePath=".\Shader.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Vector2.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Vector3.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Vector4.cpp"
 			>
 		</File>
 		<File
