@@ -13,6 +13,7 @@ private:
 public:
 	GLuint mProgram;
 	GLint m_a_position;
+	GLint m_a_color;
 	GLint m_u_color;
 	bool Init();
 	Shader(const char * vertexShaderFile, const char * fragmentShaderFile);
