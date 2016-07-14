@@ -3,11 +3,14 @@
 #include "WinSurface.h"
 #include "Shader.h"
 #include "Vertex.h"
+#include <time.h>
+#include <math.h>
 
 #define SCREEN_W 420
 #define SCREEN_H 720
 
 Shader * shader;
+long t_start;
 
 void Init()
 {
@@ -38,10 +41,15 @@ void Init()
 
 	glVertexAttribPointer(shader->m_a_position, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, position));
 	glEnableVertexAttribArray(shader->m_a_position);
+
+	t_start = clock();
 }
 
 void Update()
 {
+	long t_now = clock();
+	double dental = t_now - t_start;
+	glUniform3f(shader->m_u_color, sin(dental * 0.01f), 0.0f, 0.0f);
 }
 
 void Draw()
