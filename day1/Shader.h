@@ -12,8 +12,8 @@ private:
 	void FindLocations();
 public:
 	GLuint mProgram;
-	GLuint m_a_position;
-	GLuint m_u_color;
+	GLint m_a_position;
+	GLint m_u_color;
 	bool Init();
 	Shader(const char * vertexShaderFile, const char * fragmentShaderFile);
 	virtual ~Shader();
