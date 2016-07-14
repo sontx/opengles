@@ -38,6 +38,12 @@ void Init()
 
 	glVertexAttribPointer(shader->m_a_position, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, position));
 	glEnableVertexAttribArray(shader->m_a_position);
+
+	GLuint indices[] = { 0, 1, 2 };
+	GLuint ibo;
+	glGenBuffers(1, &ibo);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 }
 
 void Update()
@@ -46,7 +52,7 @@ void Update()
 
 void Draw()
 {
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, NULL);
 }
 
 void Destroy()
