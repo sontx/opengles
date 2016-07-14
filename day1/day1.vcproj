@@ -182,6 +182,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Model.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Shader.h"
 				>
 			</File>
@@ -220,6 +224,10 @@
 		</File>
 		<File
 			RelativePath=".\Matrix.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Model.cpp"
 			>
 		</File>
 		<File
