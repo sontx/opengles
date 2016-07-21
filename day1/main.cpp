@@ -4,12 +4,14 @@
 #include "Shader.h"
 #include "Vertex.h"
 #include "Model.h"
+#include "Texture.h"
 
 #define SCREEN_W 420
 #define SCREEN_H 720
 
 Shader * shader;
 Model * model;
+Texture * texture;
 
 void Init()
 {
@@ -17,6 +19,8 @@ void Init()
 	shader->Init();
 	model = new Model("../res/models/Woman2.nfg");
 	model->Init();
+	texture = new Texture("../res/textures/Woman2.tga");
+	texture->Init();
 
 	glUseProgram(shader->mProgram);
 	glBindBuffer(GL_ARRAY_BUFFER, model->mVBO);
@@ -24,6 +28,11 @@ void Init()
 
 	glVertexAttribPointer(shader->m_a_position, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, position));
 	glEnableVertexAttribArray(shader->m_a_position);
+	glVertexAttribPointer(shader->m_a_uv, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, uv));
+	glEnableVertexAttribArray(shader->m_a_uv);
+
+	glBindTexture(GL_TEXTURE_2D, texture->mTextureId);
+	glUniform1i(shader->m_u_texture, 0);
 }
 
 void Update()
@@ -39,6 +48,7 @@ void Destroy()
 {
 	MEM_FREE(shader);
 	MEM_FREE(model);
+	MEM_FREE(texture);
 }
 
 void Key(int keyCode, bool isKeyDown)

@@ -85,7 +85,9 @@ GLuint Shader::LoadShader(GLenum type, const char * shaderFile)
 void Shader::FindLocations()
 {
 	m_a_position = glGetAttribLocation(mProgram, "a_position");
+	m_a_uv = glGetAttribLocation(mProgram, "a_uv");
 	m_u_color = glGetUniformLocation(mProgram, "u_color");
+	m_u_texture = glGetUniformLocation(mProgram, "u_texture");
 }
 
 bool Shader::Init()

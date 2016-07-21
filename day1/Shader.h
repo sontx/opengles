@@ -13,7 +13,9 @@ private:
 public:
 	GLuint mProgram;
 	GLint m_a_position;
+	GLint m_a_uv;
 	GLint m_u_color;
+	GLint m_u_texture;
 	bool Init();
 	Shader(const char * vertexShaderFile, const char * fragmentShaderFile);
 	virtual ~Shader();
