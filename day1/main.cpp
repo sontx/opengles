@@ -25,13 +25,13 @@ void Init()
 	glUseProgram(shader->mProgram);
 	glBindBuffer(GL_ARRAY_BUFFER, model->mVBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, model->mIBO);
+	glBindTexture(GL_TEXTURE_2D, texture->mTextureId);
 
 	glVertexAttribPointer(shader->m_a_position, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, position));
 	glEnableVertexAttribArray(shader->m_a_position);
 	glVertexAttribPointer(shader->m_a_uv, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)offsetof(Vertex, uv));
 	glEnableVertexAttribArray(shader->m_a_uv);
 
-	glBindTexture(GL_TEXTURE_2D, texture->mTextureId);
 	glUniform1i(shader->m_u_texture, 0);
 }
 
